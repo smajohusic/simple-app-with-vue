@@ -25,14 +25,8 @@ Vue.use(Swal);
 // Config
 Vue.http.headers.common['X-CSRF-TOKEN'] = window.csrfToken;
 
-// Components
-import frontpage from './components/frontpage';
-import createTeam from './components/createTeam';
-
-const routes = [
-  {path: '/', component: frontpage},
-  {path: '/team/create', component: createTeam}
-]
+// Routes
+import routes from './routes';
 
 const router = new VueRouter({
       routes
