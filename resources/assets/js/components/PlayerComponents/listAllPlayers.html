@@ -1,0 +1,25 @@
+<div class="list-players">
+
+    <div class="row">
+
+        <div v-for="player in players" class="col-md-4">
+            <router-link :to="'/player/overview/edit/' + player.id">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text-align: center"><h2>{{ player.name }}</h2></div>
+                    <div class="panel-body">
+                        <p><strong>Navn: </strong>{{ player.nickname }}</p>
+                        <p><strong>Alder: </strong>{{ player.age }}</p>
+                    </div>
+                </div>
+            </router-link>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-md-offset-3">
+
+
+
+    </div>
+
+    <div style="margin-top: 10px;" class="btn btn-warning" @click="goBack()">Tilbake</div>
+</div>
