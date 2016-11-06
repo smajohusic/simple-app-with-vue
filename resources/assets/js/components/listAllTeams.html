@@ -1,0 +1,18 @@
+<div class="list-teams">
+
+    <div class="row">
+
+        <div v-for="team in teams" class="col-md-3">
+            <router-link :to="'/team/overview/edit/' + team.id">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text-align: center"><h2>{{ team.nickname }}</h2></div>
+                    <div class="panel-body">
+                        <p>{{ team.description }}</p>
+                    </div>
+                </div>
+            </router-link>
+        </div>
+    </div>
+
+    <div style="margin-top: 10px;" class="btn btn-warning" @click="goBack()">Tilbake</div>
+</div>

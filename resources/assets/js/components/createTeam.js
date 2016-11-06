@@ -61,6 +61,10 @@ export default {
       if (this.errors['nickname'] === undefined) {
         this.errors['nickname'] = '';
       }
+    },
+
+    goBack: function () {
+      this.$router.back();
     }
   }
 }

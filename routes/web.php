@@ -22,3 +22,27 @@ Route::post(
         'uses' => 'TeamController@store'
     ]
 );
+
+Route::get(
+    'api/team/overview',
+    [
+        'as' => 'api.team.overview',
+        'uses' => 'TeamController@overview'
+    ]
+);
+
+Route::get(
+    'api/team/{teamId}',
+    [
+        'as' => 'api.team.show',
+        'uses' => 'TeamController@show'
+    ]
+);
+
+Route::patch(
+    'api/team/update/{teamId}',
+    [
+        'as' => 'api.team.update',
+        'uses' => 'TeamController@update'
+    ]
+);

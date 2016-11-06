@@ -2,6 +2,7 @@
 import frontpage from './components/frontpage';
 import createTeam from './components/createTeam';
 import listAllTeams from './components/listAllTeams';
+import editTeam from './components/editTeam';
 
 export default [
   {
@@ -15,5 +16,9 @@ export default [
   {
     path: '/team/overview',
     component: listAllTeams
+  },
+  {
+    path: '/team/overview/edit/:teamId',
+    component: editTeam
   }
 ];
