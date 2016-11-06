@@ -12,6 +12,7 @@ export default {
     return {
       playerId: null,
       player: {},
+      teamMember: false,
       errors: []
     }
   },
@@ -21,6 +22,7 @@ export default {
     getPlayer: function () {
       this.$http.get('api/player/' + this.playerId).then((response) => {
         this.player = response.data;
+        this.hasTeam(this.player);
       }, (response) => {
         this.errors = response.data;
       });
@@ -36,6 +38,12 @@ export default {
         }, (response) => {
           this.$swal('Det skjedde en feil under lagringen');
         });
+    },
+
+    hasTeam: function (player) {
+      if (player.team !== null) {
+        this.teamMember = true;
+      }
     },
 
     goBack: function () {

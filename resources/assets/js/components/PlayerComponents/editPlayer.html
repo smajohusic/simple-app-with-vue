@@ -14,7 +14,8 @@
                     <label style="display: block" for="nickname">Kallenavn</label>
                     <input name="nickname" style="width: 50%;" type="text" v-model="player.nickname">
                 </form>
-                <small>Denne spilleren tilhører <b>{{ player.team.name }}</b>, også kjent som <b>{{ player.team.nickname }}</b></small>
+                <small v-if="teamMember">Denne spilleren tilhører <b>{{ player.team.name }}</b>, også kjent som <b>{{ player.team.nickname }}</b></small>
+                <small v-else>Tilhører ikke noen lag</small>
             </div>
         </div>
 
