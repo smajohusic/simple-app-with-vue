@@ -5,6 +5,7 @@ import listAllTeams from './components/TeamComponents/listAllTeams';
 import editTeam from './components/TeamComponents/editTeam';
 import createPlayer from './components/PlayerComponents/createPlayer';
 import listAllPlayers from './components/PlayerComponents/listAllPlayers';
+import editPlayer from './components/PlayerComponents/editPlayer';
 
 export default [
   {
@@ -30,5 +31,9 @@ export default [
   {
     path: '/player/overview',
     component: listAllPlayers
+  },
+  {
+    path: '/player/overview/edit/:playerId',
+    component: editPlayer
   }
 ];

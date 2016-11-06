@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Player extends Model
 {
-    protected $fillable = ['name', 'age', 'nickname'];
+    protected $fillable = ['name', 'age', 'nickname', 'team_id'];
 
     /*
     |------------------------------------------------------------------------------------------------------------------
@@ -15,11 +15,6 @@ class Player extends Model
     */
     public function team()
     {
-        return $this->belongsTo(Team::class);
-    }
-
-    public function related()
-    {
-        return $this->morphTo();
+        return $this->belongsTo(Team::class, 'team_id');
     }
 }

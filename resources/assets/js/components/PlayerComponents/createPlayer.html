@@ -27,7 +27,7 @@
             <em>Trykk på et lag før du lagrer spilleren</em>
         </div>
         <div v-for="team in teams" class="col-md-4" @click="getTeamId(team.id)">
-            <div class="panel panel-default" :style="{ border-color: activeColor }">
+            <div class="panel panel-default" :style="{ 'border-color': activeColor }">
                 <div class="panel-heading" style="text-align: center"><h2>{{ team.name }}</h2></div>
                 <div class="panel-body">
                     <p>{{ team.nickname }}</p>

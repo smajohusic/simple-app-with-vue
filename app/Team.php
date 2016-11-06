@@ -13,8 +13,4 @@ class Team extends Model
     | Relationships
     |------------------------------------------------------------------------------------------------------------------
     */
-    public function player()
-    {
-        return $this->hasMany(Player::class);
-    }
 }

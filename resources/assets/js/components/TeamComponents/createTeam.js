@@ -43,7 +43,6 @@ export default {
     },
 
     redirectUser: function (path) {
-      // Redirect user with at success message
       this.$router.push(path);
     },
 

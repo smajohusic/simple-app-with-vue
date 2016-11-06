@@ -17,7 +17,7 @@ export default {
       },
       teams: {},
       showTeams: false,
-      activeColor: 'blue',
+      activeColor: '',
       errors: []
     }
   },
@@ -33,6 +33,8 @@ export default {
             showCancelButton: false,
             confirmButtonText: 'Gå videre'
           });
+
+          this.$router.push('/');
         }, (response) => {
           this.errorMessage(response.data);
 

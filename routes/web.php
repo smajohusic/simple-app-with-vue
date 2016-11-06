@@ -58,7 +58,7 @@ Route::post(
     'api/player/store',
     [
         'as' => 'player.create',
-        'uses' => 'PlayerController@create'
+        'uses' => 'PlayerController@store'
     ]
 );
 
@@ -67,5 +67,21 @@ Route::get(
     [
         'as' => 'player.overview',
         'uses' => 'PlayerController@overview'
+    ]
+);
+
+Route::get(
+    'api/player/{playerId}',
+    [
+        'as' => 'api.player.show',
+        'uses' => 'PlayerController@show'
+    ]
+);
+
+Route::patch(
+    'api/player/update/{playerId}',
+    [
+        'as' => 'api.player.update',
+        'uses' => 'PlayerController@update'
     ]
 );
