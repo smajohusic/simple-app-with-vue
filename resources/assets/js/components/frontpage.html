@@ -1,31 +1,59 @@
 <div class="row menu-frontpage">
     <div class="row">
-        <div class="col-md-4 col-md-offset-2">
+        <div class="col-xs-12 col-md-4 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading" style="text-align: center"><h2>Opprett et nytt lag</h2></div>
 
-                <div class="panel-body">
-                    <router-link to="/team/create">
+                <router-link to="/team/create">
+                    <div class="panel-body">
                         <p style="text-align: center;">
                             Ønsker du å opprette et lag?
-                        <span class="glyphicon glyphicon-edit"></span>
-                        </p>
-                    </router-link>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading" style="text-align: center"><h2>Rediger eksisterende</h2></div>
-
-                <div class="panel-body">
-                    <router-link to="/team/edit">
-                        <p style="text-align: center;">
-                            Rediger et eksisterende lag?
                             <span class="glyphicon glyphicon-edit"></span>
                         </p>
-                    </router-link>
-                </div>
+                    </div>
+                </router-link>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text-align: center"><h2>Se alle lag</h2></div>
+
+                <router-link to="/team/overview">
+                    <div class="panel-body">
+                        <p style="text-align: center;">
+                            Se alle opprettet lag
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </p>
+                    </div>
+                </router-link>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text-align: center"><h2>Opprett et ny spiller</h2></div>
+
+                <router-link to="/player/create">
+                    <div class="panel-body">
+                        <p style="text-align: center;">
+                            Ønsker du å opprett ny spiller?
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </p>
+                    </div>
+                </router-link>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text-align: center"><h2>Se alle spillere</h2></div>
+
+                <router-link to="/player/overview">
+                    <div class="panel-body">
+                        <p style="text-align: center;">
+                            Se alle spillere
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </p>
+                    </div>
+                </router-link>
             </div>
         </div>
     </div>

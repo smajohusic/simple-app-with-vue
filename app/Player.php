@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Player extends Model
 {
-    protected $guarded = 'id';
+    protected $fillable = ['name', 'age', 'nickname', 'team_id'];
 
     /*
     |------------------------------------------------------------------------------------------------------------------
@@ -15,6 +15,6 @@ class Player extends Model
     */
     public function team()
     {
-        $this->belongsTo(Team::class, 'team_player_pivot');
+        return $this->belongsTo(Team::class, 'team_id');
     }
 }

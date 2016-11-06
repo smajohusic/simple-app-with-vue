@@ -43,7 +43,6 @@ export default {
     },
 
     redirectUser: function (path) {
-      // Redirect user with at success message
       this.$router.push(path);
     },
 
@@ -61,6 +60,10 @@ export default {
       if (this.errors['nickname'] === undefined) {
         this.errors['nickname'] = '';
       }
+    },
+
+    goBack: function () {
+      this.$router.back();
     }
   }
 }

@@ -1,0 +1,25 @@
+<div class="row">
+
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="text-align: center"><h2>Ønsker du å redigere laget?</h2></div>
+            <div class="panel-body">
+                <form id="createTeam" class="col-md-offset-2">
+                    <label style="display: block" for="name">Navn</label>
+                    <input name="name" style="width: 50%;" type="text" v-model="team.name"/>
+
+                    <label style="display: block" for="nickname">Kallenavn</label>
+                    <input name="nickname" style="width: 50%;" type="text" v-model="team.nickname">
+
+                    <label style="display: block" for="description">Beskrivelse</label>
+                    <input name="description" style="width: 50%;" type="text" v-model="team.description">
+                </form>
+            </div>
+        </div>
+
+        <div class="btn btn-success" style="margin-top: 10px;" @click="updateTeam()">Oppdater</div>
+        <div class="btn btn-warning" style="margin-top: 10px;" @click="goBack()">Tilbake</div>
+
+    </div>
+
+</div>

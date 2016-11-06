@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTeamRequest;
+use App\Http\Requests\UpdateTeamRequest;
 use App\Team;
-use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
@@ -24,6 +24,27 @@ class TeamController extends Controller
             'name' => $request->name,
             'description' => $request->description,
             'nickname' => $request->nickname
+        ]);
+    }
+
+    public function overview()
+    {
+        return $this->team->all();
+    }
+
+    public function show($teamId)
+    {
+        return $this->team->findOrFail($teamId);
+    }
+
+    public function update($teamId, UpdateTeamRequest $request)
+    {
+        $team = $this->team->findOrFail($teamId);
+
+        $team->update([
+            'name' => $request->name,
+            'nickname' => $request->nickname,
+            'description' => $request->description
         ]);
     }
 }
