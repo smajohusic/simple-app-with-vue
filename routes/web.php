@@ -46,3 +46,26 @@ Route::patch(
         'uses' => 'TeamController@update'
     ]
 );
+
+
+/*
+|------------------------------------------------------------------------------------------------------------------
+| Player routes
+|------------------------------------------------------------------------------------------------------------------
+*/
+
+Route::post(
+    'api/player/store',
+    [
+        'as' => 'player.create',
+        'uses' => 'PlayerController@create'
+    ]
+);
+
+Route::get(
+    'api/player/overview',
+    [
+        'as' => 'player.overview',
+        'uses' => 'PlayerController@overview'
+    ]
+);

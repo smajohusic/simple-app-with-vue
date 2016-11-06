@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
 {
-    protected $guarded = 'id';
-
     protected $fillable = ['name', 'description', 'nickname'];
 
     /*
@@ -17,6 +15,6 @@ class Team extends Model
     */
     public function player()
     {
-        $this->hasMany(Player::class, 'team_player_pivot');
+        return $this->hasMany(Player::class);
     }
 }
